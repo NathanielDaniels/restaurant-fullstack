@@ -10,9 +10,39 @@ body {
 
 #welcome {
   display: flex;
-  // justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100vh;
   width: 100%;
   overflow: hidden;
+}
+
+.welcome-menu {
+  width: 20%;
+  background:#eee;
+  height: 100vh;
+}
+
+.menu {
+  .menu-title {
+    color: blue;
+    font-weight: bold;
+  }
+  ul {
+    li {
+      margin: 1em 0;
+      a {
+        text-decoration: none;
+        img {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+}
+
+.welcome-jumbo {
+  width: 80%;
+  background: blueviolet;
+  height: 100vh;
 }
