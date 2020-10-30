@@ -6,43 +6,93 @@
 
 body {
   background: blueviolet;
+  font-family: Roboto;
 }
 
-#welcome {
+section#welcome {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
   width: 100%;
   overflow: hidden;
-}
+  .welcome-menu {
+    padding: 0.5em;
+    border-right: 2px solid black;
+    width: 15%;
+    background: #eee;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .menu {
+      .menu-title {
+        color: blue;
+      }
+      ul {
+        li {
+          margin: 2em 1em;
+          a {
+            text-decoration: none;
+            font-size: 2.5rem; 
+            color: #333333;
+          }
+        }
+      }
+      .social-icons {
+        width: 80%;
+        margin: 0 auto;
+        // display: flex;
+        // justify-content: space-evenly;
+        a {
+          text-decoration: none;
+          margin-right:.5em;
+          img {
+            opacity: 0.8;
+            width: 2em;
+          }
+        }
+      }
 
-.welcome-menu {
-  width: 20%;
-  background:#eee;
-  height: 100vh;
-}
-
-.menu {
-  .menu-title {
-    color: blue;
-    font-weight: bold;
-  }
-  ul {
-    li {
-      margin: 1em 0;
-      a {
-        text-decoration: none;
-        img {
-          font-size: 1em;
+    }
+    // .social-icons {
+    //   width: 80%;
+    //   margin: 0 auto;
+    //   display: flex;
+    //   justify-content: space-evenly;
+    //   a {
+    //     text-decoration: none;
+    //     img {
+    //       opacity: 0.8;
+    //       width: 2em;
+    //     }
+    //   }
+    // }
+    .location {
+      
+      font-size: 1.3rem;
+      .address {
+        line-height: 1.2;
+      }
+      .phone-number {
+        font-size: 1.5rem;
+        margin-top: .5em;
+        a {
+          text-decoration: none;
         }
       }
     }
   }
+  .welcome-jumbo {
+    width: 80%;
+    background: blueviolet;
+    height: 100vh;
+  }
 }
 
-.welcome-jumbo {
-  width: 80%;
-  background: blueviolet;
-  height: 100vh;
-}
+
+
+
+
+
+
