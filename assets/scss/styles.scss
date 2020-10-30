@@ -17,33 +17,44 @@ section#welcome {
   width: 100%;
   overflow: hidden;
   .welcome-menu {
-    padding: 0.5em;
+    // padding: 0.5em;
     border-right: 2px solid black;
-    width: 15%;
+    width: 15em;
     background: #eee;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    .logo {
+      margin: 1em;
+    }
     .menu {
       .menu-title {
         color: blue;
       }
       ul {
         li {
-          margin: 2em 1em;
+          border-bottom: 2px solid #9b9b9b;
+          padding: 1em 1em;
           a {
             text-decoration: none;
             font-size: 2.5rem; 
             color: #333333;
+            width: 100%;
+          }
+          &:nth-child(1) {
+            border-top: 2px solid #9b9b9b;
           }
         }
+        
       }
       .social-icons {
-        width: 80%;
+        padding-top: 2em;
+        width: calc(100% - 15em);
         margin: 0 auto;
-        // display: flex;
-        // justify-content: space-evenly;
+        display: flex;
+        justify-content: space-evenly;
         a {
           text-decoration: none;
           margin-right:.5em;
@@ -55,21 +66,8 @@ section#welcome {
       }
 
     }
-    // .social-icons {
-    //   width: 80%;
-    //   margin: 0 auto;
-    //   display: flex;
-    //   justify-content: space-evenly;
-    //   a {
-    //     text-decoration: none;
-    //     img {
-    //       opacity: 0.8;
-    //       width: 2em;
-    //     }
-    //   }
-    // }
     .location {
-      
+      padding: 1em;
       font-size: 1.3rem;
       .address {
         line-height: 1.2;
