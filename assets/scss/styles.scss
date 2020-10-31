@@ -5,7 +5,7 @@
 
 
 body {
-  background: blueviolet;
+  background: #5f0417;
   font-family: Roboto;
 }
 
@@ -27,7 +27,11 @@ section#welcome {
     justify-content: space-between;
     position: relative;
     .logo {
-      margin: 1em;
+      margin: 1em 0;
+      img {
+        width: 7em;
+
+      }
     }
     .menu {
       .menu-title {
@@ -84,23 +88,37 @@ section#welcome {
   .welcome-jumbo {
     position: relative;
     width: 80%;
-    background: blueviolet;
+    background: #5f0417;
     height: 100vh;
     width: calc(100% - 15em);
     .title {
-      position: relative;
-      top: 8em;
-      left: 2em;
+      width: 35em;
+      // position: relative;
+      // top: 8em;
+      // left: 8em;
+      display: flex;
+      justify-content:center;
+      al
       color: #fff;
       h1 {
         font-size: 6rem;
         padding: .2em;
+        line-height: .8;
+        span {
+          position: relative;
+          // left: -2px;
+          text-transform: uppercase;
+          font-size: 10rem;
+          color: #ee9b08;
+          font-weight: 600;
+        }
       }
       p {
-        font-size: 1.8rem;
+        font-size: 3.5rem;
         position: inherit;
-        top: -1em;
-        left: 8rem;
+        top: -.4em;
+        left: .5em;
+        color: rgb(204, 204, 204);
       }
     }
     img {
