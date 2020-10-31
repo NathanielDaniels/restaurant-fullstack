@@ -51,7 +51,7 @@ section#welcome {
       }
       .social-icons {
         padding-top: 2em;
-        width: calc(100% - 15em);
+        width: 80%;
         margin: 0 auto;
         display: flex;
         justify-content: space-evenly;
@@ -82,9 +82,34 @@ section#welcome {
     }
   }
   .welcome-jumbo {
+    position: relative;
     width: 80%;
     background: blueviolet;
     height: 100vh;
+    width: calc(100% - 15em);
+    .title {
+      position: relative;
+      top: 8em;
+      left: 2em;
+      color: #fff;
+      h1 {
+        font-size: 6rem;
+        padding: .2em;
+      }
+      p {
+        font-size: 1.8rem;
+        position: inherit;
+        top: -1em;
+        left: 8rem;
+      }
+    }
+    img {
+      position: absolute;
+      right: 0;
+      top: -18em;
+      width: 50%;
+      filter: drop-shadow(-10px 0px 10px hsla(0, 0%, 0%,.4))
+    }
   }
 }
 
