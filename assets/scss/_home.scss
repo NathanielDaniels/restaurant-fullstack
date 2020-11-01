@@ -1,3 +1,43 @@
+@keyframes menuSlide {
+	0% {
+    // left: -15em;
+    transform: translateX(-15em);
+	}
+	100% {
+    // left: 0em;
+    transform: translateX(0em);
+
+	}
+};
+@keyframes titleFade {
+	0% {
+    display: none;
+		opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+	100% {
+    display: block;
+		opacity: 1
+	}
+};
+@keyframes pizzaSlide {
+	0% {
+    display: none;
+    right: -15em;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+	100% {
+    display: block;
+    right: 0em;
+    opacity: 1;
+	}
+}
 
 section#welcome {
 	display: flex;
@@ -5,7 +45,14 @@ section#welcome {
 	align-items: center;
 	height: 100vh;
 	width: 100%;
-	overflow: hidden;
+  overflow: hidden;
+  background: rgb(128, 9, 34);
+  background: linear-gradient(
+	140deg,
+	rgba(128, 9, 34, 1) 0%,
+	rgba(95, 4, 23, 1) 50%
+);
+
 	.welcome-menu {
 		// padding: 0.5em;
 		border-right: 2px solid black;
@@ -15,13 +62,13 @@ section#welcome {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		position: relative;
+    position: relative;
+    animation: menuSlide 1s 1 ease-in-out;
 		.logo {
       margin: .5em 0;
       font-size: 2rem;
       text-align: center;
 			img {
-				// width: 7em;
 				width: 5em;
 			}
 		}
@@ -92,16 +139,11 @@ section#welcome {
 	.welcome-jumbo {
 		cursor: default;
 		position: relative;
-    // background: #5f0417;
-    background: rgb(128, 9, 34);
-    background: linear-gradient(
-      140deg,
-      rgba(128, 9, 34, 1) 0%,
-      rgba(95, 4, 23, 1) 50%
-    );
 		height: 100vh;
 		width: calc(100% - 15em);
 		.title {
+      animation: titleFade 2.5s 1 ease-in-out;
+      // opacity: 0;
 			text-align: center;
 			max-width: 50%;
 			position: relative;
@@ -127,10 +169,11 @@ section#welcome {
 			}
 		}
 		img {
-			position: absolute;
+      animation: pizzaSlide 1s 1 ease-in-out;
+      position: absolute;
 			right: 0;
 			top: 50%;
-			transform: translate(0, -50%);
+			transform: translateY(-50%);
       max-width: 50%;
       min-width: 20em;
 			filter: drop-shadow(-10px 0px 10px hsla(0, 0%, 0%, 0.4));
