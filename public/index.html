@@ -25,6 +25,7 @@
   </head>
   <body>
     <section id="welcome">
+      <!--! Left Side (menu) -->
       <div class="welcome-menu">
         <div class="close">X</div>
         <div class="logo">
@@ -45,7 +46,7 @@
             </li>
             <li>
               <a href="www.twitter.com">
-              <img src="./img/icons/twitter.png" alt="Twitter" title="Twitter">
+                <img src="./img/icons/twitter.png" alt="Twitter" title="Twitter">
               </a>
             </li>
             <li>
@@ -64,6 +65,7 @@
           </div>
         </div>
       </div>
+      <!--! Right Side -->
       <div class="welcome-jumbo">
         <div class="mobile-burger-menu">
           <button class="mobile-burger-menu__container">
@@ -82,6 +84,34 @@
       </div>
     </section>
 
+    <!--! Javascript -->
     <script src="/js/dist/main.js"></script>
+    <script>
+      function mobileMenu() {
+        const menu = document.querySelector('.welcome-menu');
+        const burgerMenu = document.querySelector('.mobile-burger-menu__elements');
+
+        menu.addEventListener('click', closeBtn);
+
+        function closeBtn() {
+          this.style.transform = 'translateX(-15em)';
+        }
+
+        burgerMenu.addEventListener('click', function() {
+          console.log('clicked');
+          menu.style.transform = 'translateX(0em)';
+          // $(this).toggleClass('close')
+        });
+
+        //! Close btn SideBar Nav Menu
+        document
+          .querySelector('#mobile-nav-menu ul li a')
+          .addEventListener('click', function() {
+            document.querySelector('#mobile-nav-menu').removeClass('active');
+            // $menu.removeClass('close')
+          });
+      }
+      mobileMenu();
+    </script>
   </body>
 </html>
