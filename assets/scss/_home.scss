@@ -135,7 +135,8 @@ section#welcome {
 				}
 			}
 		}
-	}
+  }
+  //! Right Side
 	.welcome-jumbo {
 		cursor: default;
 		position: relative;
@@ -154,8 +155,6 @@ section#welcome {
 			h1 {
 				// font-size: 5rem;
         font-size: clamp(5rem, 1vw, 1rem);
-        // font-size: clamp(0.9rem, 1vw + 1rem, 2.2rem);
-
 				line-height: 0.8;
 				span {
 					position: relative;
@@ -185,30 +184,41 @@ section#welcome {
 }
 
 @media screen and (max-width: 800px) {
-  .welcome-menu {
-    display: none !important;
-  }
-  .welcome-jumbo {
-    .title {
-      text-align: right !important;
-		// h1 {
-		// 	span {
-		// 	}
-		// }
-		// p {
-		// }
-	}
-	img {
-    height: 100%;
-    position: absolute;
-    transform: rotate(180deg) !important;
-		// right: -50% !important;
-		// transform: translate(0, -50%);
-		max-width: 50%;
-		min-width: 20em;
-		filter: drop-shadow(-10px 0px 10px hsla(0, 0%, 0%, 0.4));
-	}
-}
+  section#welcome {
+    div.welcome-menu {
+      position: absolute;
+      z-index: 100;
+    }
+    div.welcome-jumbo {
+      width: 100%;
+      div.title {
+        top: 40%;
+        left: 10%;
+        animation: none;
+        z-index: 5;
+        max-width: 100%;
+        h1 {
+          font-size: 5rem;
+          // 	span {
+          // 	}
+        }
+        // p {
+        // }
+      }
+      img {
+        animation: none;
+        top: 10em;
+        // height: 5%;
+        position: absolute;
+        // right: 25% !important;
+        // transform: translateX(50%);
+        transform: rotate(45deg);
+        max-width: 100%;
+      }
+    }
+
+      }
+  
 
 }
 

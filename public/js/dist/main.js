@@ -58,6 +58,6 @@
     return __webpack_require__(__webpack_require__.s = "./assets/js/main.js");
 })({
     "./assets/js/main.js": function(module, exports) {
-        eval("\n\n//# sourceURL=webpack:///./assets/js/main.js?");
+        eval("const menu = document.querySelector('.welcome-menu');\nconsole.log(menu);\n\n//# sourceURL=webpack:///./assets/js/main.js?");
     }
 });
