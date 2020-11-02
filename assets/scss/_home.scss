@@ -64,6 +64,9 @@ section#welcome {
 		justify-content: space-between;
     position: relative;
     animation: menuSlide 1s 1 ease-in-out;
+    .close {
+      display: none;
+    }
 		.logo {
       margin: .5em 0;
       font-size: 2rem;
@@ -184,17 +187,117 @@ section#welcome {
 }
 
 @media screen and (max-width: 800px) {
+* {
+  animation: none !important;
+}
+
+// .welcome-menu {
+// 		// padding: 0.5em;
+// 		border-right: 2px solid black;
+// 		width: 15em;
+// 		background: #eee;
+// 		height: 100vh;
+// 		display: flex;
+// 		flex-direction: column;
+// 		justify-content: space-between;
+//     position: relative;
+//     animation: menuSlide 1s 1 ease-in-out;
+// 		.logo {
+//       margin: .5em 0;
+//       font-size: 2rem;
+//       text-align: center;
+// 			img {
+// 				width: 6em;
+// 			}
+// 		}
+
   section#welcome {
     div.welcome-menu {
+      // width: 100%;
       position: absolute;
       z-index: 100;
+      box-shadow: 2px 0px 5px hsl(347, 92%, 9%);
+      div.close {
+        // width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin: .2em;
+        font-size: 2em;
+        cursor: pointer;
+      }
+      div.logo {
+        // margin-top: 1em;
+
+        img {
+          width: 5em;
+        }
+      }
     }
     div.welcome-jumbo {
       width: 100%;
+      .mobile-burger-menu__container {
+        z-index: 100;
+        float: right;
+        background: transparent;
+        border: transparent;
+        border-radius: 50%;
+        margin-right: 10px;
+        position: relative;
+        padding: 5px;
+        cursor: pointer;
+        &:focus {
+          outline: thin dashed;
+          outline-color: #ee9b08;
+          padding: 0 5px;
+        }
+        .mobile-burger-menu__elements {
+          width: 35px;
+          height: 35px;
+          position: relative;
+          top: 5px;
+          &:hover,
+          &:focus {
+            filter: drop-shadow(0px 2px 2px #ee9b08);
+          }
+          &:hover .line,
+          &:focus .line {
+            background: #ee9b08;
+          }
+          .line {
+            position: absolute;
+            width: 35px;
+            height: 4px;
+            left: 0px;
+            background: #ee9b08;
+            border-radius: 2.5px;
+            transition: all 0.2s cubic-bezier(0.42, 0, 0.68, 1.78);
+          }
+          .line01 {
+            top: 5%;
+          }
+          .line02 {
+            top: 30%;
+          }
+          .line03 {
+            top: 55%;
+          }
+        }
+        .mobile-burger-menu__elements.close .line01 {
+          transform: rotate(45deg);
+          top: 30%;
+          background: yellow;
+        }
+        .mobile-burger-menu__elements.close .line02,
+        .mobile-burger-menu__elements.close .line03 {
+          background: yellow;
+          top: 30%;
+          transform: rotate(-45deg);
+        }
+      }
+
       div.title {
         top: 40%;
         left: 10%;
-        animation: none;
         z-index: 5;
         max-width: 100%;
         h1 {
@@ -206,7 +309,6 @@ section#welcome {
         // }
       }
       img {
-        animation: none;
         top: 10em;
         // height: 5%;
         position: absolute;
