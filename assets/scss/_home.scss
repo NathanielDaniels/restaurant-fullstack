@@ -69,7 +69,7 @@ section#welcome {
       font-size: 2rem;
       text-align: center;
 			img {
-				width: 5em;
+				width: 6em;
 			}
 		}
 		.menu {
@@ -152,7 +152,10 @@ section#welcome {
 			transform: translate(-10%, -50%);
 			color: #fff;
 			h1 {
-				font-size: 5rem;
+				// font-size: 5rem;
+        font-size: clamp(5rem, 1vw, 1rem);
+        // font-size: clamp(0.9rem, 1vw + 1rem, 2.2rem);
+
 				line-height: 0.8;
 				span {
 					position: relative;
@@ -186,13 +189,14 @@ section#welcome {
     display: none !important;
   }
   .welcome-jumbo {
-	.title {
-		h1 {
-			span {
-			}
-		}
-		p {
-		}
+    .title {
+      text-align: right !important;
+		// h1 {
+		// 	span {
+		// 	}
+		// }
+		// p {
+		// }
 	}
 	img {
     height: 100%;
