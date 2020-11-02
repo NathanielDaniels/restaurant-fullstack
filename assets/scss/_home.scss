@@ -144,7 +144,10 @@ section#welcome {
 		cursor: default;
 		position: relative;
 		height: 100vh;
-		width: calc(100% - 15em);
+    width: calc(100% - 15em);
+    .mobile-burger-menu__container {
+      display: none;
+    }
 		.title {
       animation: titleFade 2.5s 1 ease-in-out;
       // opacity: 0;
@@ -187,38 +190,18 @@ section#welcome {
 }
 
 @media screen and (max-width: 800px) {
-* {
-  animation: none !important;
-}
-
-// .welcome-menu {
-// 		// padding: 0.5em;
-// 		border-right: 2px solid black;
-// 		width: 15em;
-// 		background: #eee;
-// 		height: 100vh;
-// 		display: flex;
-// 		flex-direction: column;
-// 		justify-content: space-between;
-//     position: relative;
-//     animation: menuSlide 1s 1 ease-in-out;
-// 		.logo {
-//       margin: .5em 0;
-//       font-size: 2rem;
-//       text-align: center;
-// 			img {
-// 				width: 6em;
-// 			}
-// 		}
+  * {
+    animation: none !important;
+  }
 
   section#welcome {
     div.welcome-menu {
-      // width: 100%;
+      transform: translateX(-15em);
       position: absolute;
       z-index: 100;
       box-shadow: 2px 0px 5px hsl(347, 92%, 9%);
+      transition: all 0.3s ease-in-out;
       div.close {
-        // width: 100%;
         display: flex;
         justify-content: flex-end;
         margin: .2em;
@@ -227,7 +210,6 @@ section#welcome {
       }
       div.logo {
         // margin-top: 1em;
-
         img {
           width: 5em;
         }
@@ -236,14 +218,12 @@ section#welcome {
     div.welcome-jumbo {
       width: 100%;
       .mobile-burger-menu__container {
-        z-index: 100;
-        float: right;
+        display: block;
         background: transparent;
         border: transparent;
         border-radius: 50%;
-        margin-right: 10px;
+        margin: .5em;
         position: relative;
-        padding: 5px;
         cursor: pointer;
         &:focus {
           outline: thin dashed;
@@ -296,8 +276,7 @@ section#welcome {
       }
 
       div.title {
-        top: 40%;
-        left: 10%;
+        top: 30%;
         z-index: 5;
         max-width: 100%;
         h1 {
