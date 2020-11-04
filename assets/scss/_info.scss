@@ -1,34 +1,84 @@
 #information {
   background: #fff;
-  display: flex;
+  // display: flex;
+  position: relative;
+  height: 80vh;
+  width: 100%;
   .restaurant-img {
-    width: 32%;
+    z-index: 1;
+    position: absolute;
+    width: 50em;
+    left: 4em;
+    top: 4em;
     img {
+      // display: none;
       width: 100%;
       object-fit: contain;
-      border-right: 2px solid black;
+      border: 2px solid black;
     }
   }
   .restaurant-info {
-    display: relative;
-    width: 68%;
-    h1 {
-      position: absolute;
-      left: 50%;
-      transform: translateX(50%);
-      margin-top: 1em;
+    margin-top: 5em;
+    border: 2px solid red;
+    background: #fff;
+    position: relative;
+    z-index: 100;
+    width: 50%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    .info-title {
       font-size: 4rem;
       text-align: center;
     }
     .info-content {
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin-top: 2em;
+      display: flex; 
       p {
-        padding: 2em;
+        padding:0 2em;
         font-size: 1.1rem;
+        line-height: 1.5;
       }
     }
   }
 }
+
+//! Original
+// #information {
+//   background: #fff;
+//   display: flex;
+//   .restaurant-img {
+//     width: 32%;
+//     img {
+//       width: 100%;
+//       object-fit: contain;
+//       border-right: 2px solid black;
+//     }
+//   }
+//   .restaurant-info {
+//     display: relative;
+//     width: 68%;
+//     padding: 2em;
+//     h1 {
+//       position: absolute;
+//       left: 50%;
+//       transform: translateX(50%);
+//       margin-top: 1em;
+//       font-size: 4rem;
+//       text-align: center;
+//     }
+//     .info-content {
+//       height: 100%;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       p {
+//         padding:0 2em;
+//         font-size: 1.1rem;
+//       }
+//     }
+//   }
+// }
