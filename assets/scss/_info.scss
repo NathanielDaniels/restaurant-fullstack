@@ -1,12 +1,19 @@
 #information {
   background: #fff;
+  display: flex;
   .restaurant-img {
-    width: 50%;
-    // img {}
+    width: 40%;
+    img {
+      width: 100%;
+      object-fit: contain;
+      border-right: 2px solid black;
+    }
   }
   .restaurant-info {
+    width: 60%;
     h1 {
       font-size: 4rem;
+      text-align: center;
     }
   }
 }
