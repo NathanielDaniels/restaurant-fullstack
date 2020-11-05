@@ -1,4 +1,13 @@
-//! Original
+@keyframes infoSlide {
+	0% {
+		transform: translateX(5em);
+	}
+	100% {
+		transform: translateX(0em);
+	}
+};
+
+
 #information {
   margin-bottom: -10px;
 	background: #fff;
@@ -17,6 +26,7 @@
 		}
 	}
 	.restaurant-info {
+    animation: infoSlide 1s 1 ease-in-out;
 		z-index: 100;
 		width: 50%;
 		position: absolute;
@@ -75,6 +85,7 @@
 	section#information {
     height: 40em;
     flex-direction: column;
+    background: rgb(37, 37, 37);
     // background-image: url('../../public/img/pizza/pizza-kitchen.jpg');
     // background-position: center;
     // background-repeat: no-repeat;
@@ -92,7 +103,7 @@
       width: 90%;
       right: 0;
       top: 0;
-      margin: -5em auto 0;
+      margin: -6em auto 0;
       position: relative;
 
       // z-index: 100;
@@ -103,7 +114,7 @@
       // align-items: center;
       // background: #fff;
       padding: 1em 0;
-      height: 25em;
+      height: 28em;
       // border: 2px solid black;
       // box-shadow: 5px 5px 15px hsla(0, 0%, 0%, 0.5);
 
