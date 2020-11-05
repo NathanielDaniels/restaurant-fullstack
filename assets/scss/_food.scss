@@ -22,25 +22,43 @@
   border-top: 2px solid black;
 
 
-  h1 {
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-    font-size: 5rem;
-    font-weight: 600;   
-    padding: .5em;
+  .title {
+    width: 100%;
     text-align: center;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    h1 {
+      font-size: 5rem;
+      font-weight: 600;
+      padding: 0.5em;
+      // text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    a {
+      color: #fff;
+      background: #ee9b08;
+      padding: .5em 1em;
+      border-radius: 10px;
+      font-size: 1.3rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background .3s ease-in-out;
+      border: 1px solid #ee9b08;
+
+      &:hover {
+        background: transparent;
+        border: 1px solid #ee9b08;
+      }
+    }
+
   }
   .cards {
-    margin-top: -10em;
-    height: 100%;
+    margin-top: 5em;
+    // height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    // align-items: center;
     ul {
       display: inherit;
       li {
