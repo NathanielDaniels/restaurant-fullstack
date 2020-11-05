@@ -57,7 +57,20 @@
         // max-width: 50%;
 				padding: 0 1em;
 				font-size: 1.1rem;
-				line-height: 1.5;
+        line-height: 1.5;
+        span {
+          position: relative;
+          &::after {
+            content: '';
+            position: absolute;
+            border-bottom: 0.2em solid rgba(255, 0, 0, 0.8);
+            top: 50%;
+            right: 0;
+            left: 0;
+            line-height: 1em;
+            margin-top: calc(0.2em / 10 * -1);
+          }
+        }
 			}
 		}
 		a {
