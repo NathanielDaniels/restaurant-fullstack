@@ -15,7 +15,7 @@
   background: rgb(228, 228, 228);
   height: 35em;
 	position: relative;
-	border-bottom: 2px solid black;
+	// border-bottom: 2px solid black;
 	.restaurant-img {
 		width:50%;
 		img {
@@ -31,7 +31,7 @@
 		width: 50%;
 		height: 30em;
 		position: absolute;
-		right: 3em;
+		right: 4em;
 		top: 2.5em;
 		display: flex;
 		flex-direction: column;
