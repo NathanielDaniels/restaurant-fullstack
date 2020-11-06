@@ -10,12 +10,11 @@
 
 #information {
   margin-bottom: -10px;
-	background: #fff;
 	display: flex;
   background: rgb(228, 228, 228);
+	// background: #C1C1CB;
   height: 35em;
 	position: relative;
-	// border-bottom: 2px solid black;
 	.restaurant-img {
 		width:50%;
 		img {
@@ -32,7 +31,7 @@
 		height: 30em;
 		position: absolute;
 		right: 4em;
-		top: 2.5em;
+		top: 2em;
 		display: flex;
 		flex-direction: column;
     justify-content: space-evenly;
