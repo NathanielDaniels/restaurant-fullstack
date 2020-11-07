@@ -87,7 +87,7 @@ section#welcome {
 						border-bottom: 2px solid #9b9b9b;
             padding: 0.3em 0.3em;
             transition: border-right .3s ease-in-out;
-						&:hover {
+						&:hover, &:focus {
               border-right: 10px solid #ee9b08;
 						}
 					}
@@ -112,7 +112,7 @@ section#welcome {
 							width: 1em;
               transition: background .3s ease-in-out;
               border-radius: 50%;
-              &:hover {
+              &:hover, &:focus {
                 background: #ee9b08;
               }
             }
