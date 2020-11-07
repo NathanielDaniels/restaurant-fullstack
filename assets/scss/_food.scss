@@ -87,6 +87,29 @@
             color: #5f0417;
             font-size: 2rem;
             font-weight: 500;
+            z-index: 100;
+          }
+          .warning {
+            font-size: 1rem;
+            background: rgb(128, 9, 34);
+            background: linear-gradient(
+              140deg,
+              
+              rgba(95, 4, 23, 1) 50%,
+              rgba(128, 9, 34, 1) 0%
+            );
+            color: white;
+            position: absolute;
+            padding: .5em 1em;
+            border-radius: 5px;
+            height: 1.6em;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            right: .5em;
+            top: 3.1em;
+            text-transform: uppercase;
+            letter-spacing: .5px;
           }
           .card__info {
             padding: 0 1em;
@@ -128,6 +151,9 @@
             .card__title {
               color: #fff;
               text-shadow: 0 2px 2px red;
+            }
+            .warning {
+              background: red;
             }
             .card__info {
               span {
