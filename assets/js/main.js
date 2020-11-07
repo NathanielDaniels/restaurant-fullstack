@@ -22,7 +22,7 @@ function mobileMenu() {
 			// $menu.removeClass('close')
 		});
 }
-mobileMenu();
+// mobileMenu();
 
 // function hamburgerAnimation () {
 //   const burgerMenu = document.querySelector('.mobile-burger-menu__elements')

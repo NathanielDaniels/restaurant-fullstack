@@ -27,7 +27,6 @@
       font-size: 5rem;
       font-weight: 600;
       padding: 0.5em;
-      // text-align: center;
       color: #fff;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -54,24 +53,15 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    
-
     ul {
       display: inherit;
       flex-wrap: wrap;
       justify-content: center;
-      
-
       a {
         text-decoration: none;
         cursor: pointer;
-
         .card {
           position: relative;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: center;
           margin: .2em;
           width: 8em;
           height: 14em;
@@ -83,6 +73,7 @@
           overflow: hidden;
           transition: background .3s ease-in-out;
           .card__title {
+            text-align: center;
             padding: 0.5em;
             color: #5f0417;
             font-size: 2rem;
@@ -94,7 +85,6 @@
             background: rgb(128, 9, 34);
             background: linear-gradient(
               140deg,
-              
               rgba(95, 4, 23, 1) 50%,
               rgba(128, 9, 34, 1) 0%
             );
@@ -112,6 +102,7 @@
             letter-spacing: .5px;
           }
           .card__info {
+            margin: 2.5em 0;
             padding: 0 1em;
             font-size: 1rem;
             line-height: 1.5rem;
@@ -123,28 +114,20 @@
               background:hsl(38, 93%, 48%);
             }
           }
-          .card__img {
-            z-index: 100;
-            position: relative;
-            width: 8em;
-            // top: .5em;
-            top: 0em;
-            filter: drop-shadow(-2px 0px 5px hsla(0, 0%, 0%, 0.4));
-            // transform: rotate(90deg);
-            transition: top .5s ease-in-out;
-            box-shadow: 0 10px 10px red;
-
-            &.pizza {
-              top: .2em;
-              // box-shadow: 0 10px 10px red;
+          .img-container {
+            height: 10rem;
+            .card__img {
+              z-index: 100;
+              position: relative;
+              width: 8em;
+              top: 0em;
+              filter: drop-shadow(0px 4px 5px hsla(0, 0%, 0%, 0.4));
+              transition: top 0.5s ease-in-out;
+              &.pizza {
+                top: 0.8em;
+              }
             }
           }
-          
-          // .pizza {
-          //   top: 0.5em;
-          // }
-
-
           &:hover, &:focus {
             background: hsl(38, 93%, 48%);
             color: #fff;
@@ -160,14 +143,15 @@
                 background: red;
               }
             }
-               
-            
+            .img-container {
+              .pizza {
+                top: .4em;
+              }
+            }
           }
           &:hover .card__img, &:focus .card__img {
             top: -.2em;
           }
-          
-
         }
       }
     }
