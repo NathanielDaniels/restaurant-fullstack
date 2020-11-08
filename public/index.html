@@ -93,7 +93,8 @@
 				</div>
 				<img src="./img/pizza/pizza-main-cut.png" alt="Pizza" />
 			</div>
-		</section>
+    </section>
+    
 		<!--! Info Section -->
 		<section id="information">
 			<div class="restaurant-img">
@@ -128,90 +129,105 @@
         <ul>
           <a href="#HotFireChicken">
             <li class="card">
-              <h1 class="card__title">Chicken Pizza</h1>
-              <h2 class="warning">
-                Hot Fire
-                <i class="fa fa-fire" aria-hidden="true"></i>
-              </h2>
-              <p class="card__info">
-                <span pan>Limited Time:</span> Our secret red sauce, fresh local mozzarella, top of the season scorpion pepper chicken meatballs, ghost pepper slaw, finished off with Mikes hot honey drizzle.
-              </p>
-              <div class="img-container">
-                <img src="./img/hot-fire-pizza-cut.png" class="card__img pizza" alt="Pizza">
+              <div class="background"></div>
+              <div class="content">
+                <h1 class="card__title">Chicken Pizza</h1>
+                <h2 class="warning">
+                  Hot Fire
+                  <i class="fa fa-fire" aria-hidden="true"></i>
+                </h2>
+                <p class="card__info">
+                  <span pan>Limited Time:</span> Our secret red sauce, fresh local mozzarella, top of the season scorpion pepper chicken meatballs, ghost pepper slaw, finished off with Mikes hot honey drizzle.
+                </p>
+                <div class="img-container">
+                  <img src="./img/hot-fire-pizza-cut.png" class="card__img pizza" alt="Pizza">
+                </div>
               </div>
             </li>
           </a>
           <a href="#Tacos">
             <li class="card">
-              <h1 class="card__title">Tacos</h1>
-              <p class="card__info">
-                Your choice of grass fed Beef, steak, local free range chicken, or fresh shrimp. Our house taco is topped with cilantro, onion and red pepper thats wrapped in a homemade tortilla. 
-              </p>
-              <div class="img-container">
-                <img src="./img/taco.png" class="card__img" alt="Tacos">
+              <div class="background"></div>
+              <div class="content">
+                <h1 class="card__title">Tacos</h1>
+                <p class="card__info">
+                  Your choice of grass fed Beef, steak, local free range chicken, or fresh shrimp. Our house tacos are topped with cilantro, onion and red pepper. Then wrapped in a homemade tortilla. 
+                </p>
+                <div class="img-container">
+                  <img src="./img/taco.png" class="card__img" alt="Tacos">
+                </div>
               </div>
             </li>
           </a>
           <a href="#">
             <li class="card">
-              <h1 class="card__title">
-                Burgers
-              </h1>
-              <p class="card__info">
-                Our burgers are made from local grass fed beef. Our house burger is topped with smoked gouda, fried shallots and fig spread on a butter toasted brioche bun.
-              </p>
-              <div class="img-container">
-                <img src="./img/burger-fries.png" class="card__img" alt="Burger + Fries">
+              <div class="background"></div>
+              <div class="content">
+                <h1 class="card__title">
+                  Burgers
+                </h1>
+                <p class="card__info">
+                  Our burgers are made from local grass fed beef. The house burger is topped with smoked gouda, fried shallots and fig spread on a butter toasted brioche bun.
+                </p>
+                <div class="img-container">
+                  <img src="./img/burger-fries.png" class="card__img" alt="Burger + Fries">
+                </div>
               </div>
             </li>
           </a>
           <a href="#">
             <li class="card">
-              <h1 class="card__title">
-                Burritos
-              </h1>
-              <p class="card__info">
-                 Your choice of grass fed Beef, steak,  or local free range chicken. Along with jalapeno, cilantro, onion, garlic, bacon, rice, and beans. topped with avacado and wrapped in a homemade tortilla.
-              </p>
-              <div class="img-container">
-                <img src="./img/burrito.png" class="card__img" alt="Burritos">
+              <div class="background"></div>
+              <div class="content">
+                <h1 class="card__title">
+                  Burritos
+                </h1>
+                <p class="card__info">
+                  Your choice of grass fed Beef, steak,  or local free range chicken. Then add jalapeno, cilantro, onion, garlic, bacon, rice, and beans. All topped with avacado and wrapped in a homemade tortilla.
+                </p>
+                <div class="img-container">
+                  <img src="./img/burrito.png" class="card__img" alt="Burritos">
+                </div>
               </div>
             </li>
           </a>
           <a href="#">
             <li class="card">
-              <h1 class="card__title">
-                Fish-n-Chips
-              </h1>
-              <p class="card__info">
-                Fresh never frozen Cod fillets are coated with local craft beer batter and fried to perfection, served with fresh to order pub fries and Mamma Mia's own tartar sauce and ketchup.
-              </p>
-              <div class="img-container">
-                <img src="./img/fish-n-chips.png" class="card__img" alt="Mozzarella Sticks">
+              <div class="background"></div>
+              <div class="content">
+                <h1 class="card__title">
+                  Fish-n-Chips
+                </h1>
+                <p class="card__info">
+                  Fresh never frozen Cod fillets are coated with local craft beer batter and fried to perfection, served with fresh to order pub fries and Mamma Mia's own tartar sauce and ketchup.
+                </p>
+                <div class="img-container">
+                  <img src="./img/fish-n-chips.png" class="card__img" alt="Mozzarella Sticks">
+                </div>
               </div>
             </li>
           </a>
         </ul>
       </div>
     </section>
+    
 		<!--! Javascript -->
 		<script src="/js/dist/main.js"></script>
 		<script>
 			function mobileMenu () {
-				const closeMenuBtn = document.querySelector('.welcome-menu .close')
-				const burgerBtn = document.querySelector(
-					'.mobile-burger-menu__elements'
-        )
+        const menu = document.querySelector('.welcome-menu')
+        const closeMenuBtn = document.querySelector('.welcome-menu > .close')
+        const mobileBurgerBtn = document.querySelector('.mobile-burger-menu__elements')
         
-				closeMenuBtn.addEventListener('click', closeBtn)
+				closeMenuBtn.addEventListener('click', closeMenu)
 
-				function closeBtn () {
-					this.style.transform = 'translateX(-15em)'
+				function closeMenu () {
+					menu.style.transform = 'translateX(-15em)'
 				}
 
-				burgerBtn.addEventListener('click', function () {
+				mobileBurgerBtn.addEventListener('click', function () {
 					console.log('clicked')
-					closeMenu.style.transform = 'translateX(0em)'
+					menu.style.transform = 'translateX(0em)'
 					// $(this).toggleClass('close')
 				})
 

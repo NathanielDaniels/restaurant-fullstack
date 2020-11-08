@@ -55,8 +55,8 @@
         // min-width: 40%;
         // max-width: 50%;
 				padding: 0 1em;
-				font-size: 1.1rem;
-        line-height: 1.5;
+				font-size: 1rem;
+        line-height: 1.5rem;
         span {
           position: relative;
           &::after {
@@ -92,7 +92,7 @@
 	}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
 	* {
 		animation: none !important;
 	}
@@ -118,7 +118,7 @@
       width: 90%;
       right: 0;
       top: 0;
-      margin: -6em auto 0;
+      margin: -12em auto 0;
       position: relative;
       padding: 1em 0;
       height: 28em;
