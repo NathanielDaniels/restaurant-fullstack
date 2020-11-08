@@ -8,11 +8,11 @@ function mobileMenu() {
 		this.style.transform = 'translateX(-15em)';
 	}
 
-	burgerMenu.addEventListener('click', function() {
-		console.log('clicked');
-		menu.style.transform = 'translateX(0em)';
-		// $(this).toggleClass('close')
-	});
+	// burgerMenu.addEventListener('click', function() {
+	// 	console.log('clicked');
+	// 	menu.style.transform = 'translateX(0em)';
+	// 	// $(this).toggleClass('close')
+	// });
 
 	//! Close btn SideBar Nav Menu
 	document
@@ -22,7 +22,7 @@ function mobileMenu() {
 			// $menu.removeClass('close')
 		});
 }
-// mobileMenu();
+mobileMenu();
 
 // function hamburgerAnimation () {
 //   const burgerMenu = document.querySelector('.mobile-burger-menu__elements')

@@ -28,7 +28,7 @@
 		<section id="welcome">
 			<!--! Left Side (menu) -->
 			<div class="welcome-menu">
-				<!-- <div class="close">X</div> -->
+				<div class="close">X</div>
 				<div class="logo">
 					<img src="./img/mama-mia-logo-pizza-angle.png" alt="Mamma Mia logo" />
 				</div>
@@ -79,7 +79,7 @@
 			<!--! Right Side -->
 			<div class="welcome-jumbo">
 				<div class="mobile-burger-menu">
-					<button class="mobile-burger-menu__container">
+					<button class="mobile-burger-menu__button">
 						<div class="mobile-burger-menu__elements">
 							<span class="line line01" role="Side Menu button"></span>
 							<span class="line line02" role="Side Menu button"></span>
@@ -129,9 +129,12 @@
           <a href="#HotFireChicken">
             <li class="card">
               <h1 class="card__title">Chicken Pizza</h1>
-              <h2 class="warning">Hot Fire!</h2>
+              <h2 class="warning">
+                Hot Fire
+                <i class="fa fa-fire" aria-hidden="true"></i>
+              </h2>
               <p class="card__info">
-                <span pan>Limited Time:</span> Red sauce, mozzarella, scorpion pepper chicken meatballs, ghost pepper slaw, Mikes hot honey drizzle.
+                <span pan>Limited Time:</span> Our secret red sauce, fresh local mozzarella, top of the season scorpion pepper chicken meatballs, ghost pepper slaw, finished off with Mikes hot honey drizzle.
               </p>
               <div class="img-container">
                 <img src="./img/hot-fire-pizza-cut.png" class="card__img pizza" alt="Pizza">
@@ -142,7 +145,7 @@
             <li class="card">
               <h1 class="card__title">Tacos</h1>
               <p class="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore numquam nesciunt quia accusantium totam quae aut? Perspiciatis reprehenderit officiis dolorum?
+                Your choice of grass fed Beef, steak, local free range chicken, or fresh shrimp. Our house taco is topped with cilantro, onion and red pepper thats wrapped in a homemade tortilla. 
               </p>
               <div class="img-container">
                 <img src="./img/taco.png" class="card__img" alt="Tacos">
@@ -155,7 +158,7 @@
                 Burgers
               </h1>
               <p class="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore numquam nesciunt quia accusantium totam quae aut? Perspiciatis reprehenderit officiis dolorum?
+                Our burgers are made from local grass fed beef. Our house burger is topped with smoked gouda, fried shallots and fig spread on a butter toasted brioche bun.
               </p>
               <div class="img-container">
                 <img src="./img/burger-fries.png" class="card__img" alt="Burger + Fries">
@@ -168,7 +171,7 @@
                 Burritos
               </h1>
               <p class="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore numquam nesciunt quia accusantium totam quae aut? Perspiciatis reprehenderit officiis dolorum?
+                 Your choice of grass fed Beef, steak,  or local free range chicken. Along with jalapeno, cilantro, onion, garlic, bacon, rice, and beans. topped with avacado and wrapped in a homemade tortilla.
               </p>
               <div class="img-container">
                 <img src="./img/burrito.png" class="card__img" alt="Burritos">
@@ -178,13 +181,13 @@
           <a href="#">
             <li class="card">
               <h1 class="card__title">
-                Mozz-Sticks
+                Fish-n-Chips
               </h1>
               <p class="card__info">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore numquam nesciunt quia accusantium totam quae aut? Perspiciatis reprehenderit officiis dolorum?
+                Fresh never frozen Cod fillets are coated with local craft beer batter and fried to perfection, served with fresh to order pub fries and Mamma Mia's own tartar sauce and ketchup.
               </p>
               <div class="img-container">
-                <img src="./img/mozz-sticks.png" class="card__img" alt="Mozzarella Sticks">
+                <img src="./img/fish-n-chips.png" class="card__img" alt="Mozzarella Sticks">
               </div>
             </li>
           </a>
@@ -195,30 +198,30 @@
 		<script src="/js/dist/main.js"></script>
 		<script>
 			function mobileMenu () {
-				const menu = document.querySelector('.welcome-menu')
-				const burgerMenu = document.querySelector(
+				const closeMenuBtn = document.querySelector('.welcome-menu .close')
+				const burgerBtn = document.querySelector(
 					'.mobile-burger-menu__elements'
-				)
-
-				menu.addEventListener('click', closeBtn)
+        )
+        
+				closeMenuBtn.addEventListener('click', closeBtn)
 
 				function closeBtn () {
 					this.style.transform = 'translateX(-15em)'
 				}
 
-				burgerMenu.addEventListener('click', function () {
+				burgerBtn.addEventListener('click', function () {
 					console.log('clicked')
-					menu.style.transform = 'translateX(0em)'
+					closeMenu.style.transform = 'translateX(0em)'
 					// $(this).toggleClass('close')
 				})
 
 				//! Close btn SideBar Nav Menu
-				document
-					.querySelector('#mobile-nav-menu ul li a')
-					.addEventListener('click', function () {
-						document.querySelector('#mobile-nav-menu').removeClass('active')
-						// $menu.removeClass('close')
-					})
+				// document
+				// 	.querySelector('#mobile-nav-menu ul li a')
+				// 	.addEventListener('click', function () {
+				// 		document.querySelector('#mobile-nav-menu').removeClass('active')
+				// 		// $menu.removeClass('close')
+				// 	})
 			}
 			mobileMenu()
 		</script>

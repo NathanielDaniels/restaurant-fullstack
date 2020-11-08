@@ -1,10 +1,8 @@
 @keyframes menuSlide {
 	0% {
-    // left: -15em;
     transform: translateX(-15em);
 	}
 	100% {
-    // left: 0em;
     transform: translateX(0em);
 
 	}
@@ -39,10 +37,6 @@
 	}
 }
 
-* {
-  scroll-behavior: smooth;
-}
-
 section#welcome {
 	display: flex;
 	justify-content: space-between;
@@ -58,7 +52,6 @@ section#welcome {
 );
   border-bottom: 2px solid black;
 	.welcome-menu {
-		// padding: 0.5em;
 		border-right: 2px solid black;
 		width: 15em;
 		background: #eee;
@@ -146,12 +139,11 @@ section#welcome {
 		position: relative;
 		height: 100vh;
     width: calc(100% - 15em);
-    .mobile-burger-menu__container {
+    .mobile-burger-menu__button {
       display: none;
     }
 		.title {
       animation: titleFade 2.5s 1 ease-in-out;
-      // opacity: 0;
 			text-align: center;
 			max-width: 50%;
 			position: relative;
@@ -160,7 +152,6 @@ section#welcome {
 			transform: translate(-10%, -50%);
 			color: #fff;
 			h1 {
-				// font-size: 5rem;
         font-size: clamp(5rem, 1vw, 1rem);
 				line-height: 0.8;
 				span {
@@ -221,7 +212,7 @@ section#welcome {
     }
     div.welcome-jumbo {
       width: 100%;
-      .mobile-burger-menu__container {
+      .mobile-burger-menu__button {
         display: block;
         background: transparent;
         border: transparent;
@@ -241,7 +232,6 @@ section#welcome {
           top: 5px;
           &:hover .line,
           &:focus .line {
-            // background: #ee9b08;
             background: #fff;
           }
           .line {
@@ -290,18 +280,12 @@ section#welcome {
       }
       img {
         top: 10em;
-        // height: 5%;
         position: absolute;
-        // right: 25% !important;
-        // transform: translateX(50%);
         transform: rotate(45deg);
         max-width: 100%;
       }
     }
-
-      }
-  
-
+  }
 }
 
 
