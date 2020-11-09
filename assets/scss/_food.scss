@@ -28,7 +28,6 @@
       margin-bottom: .6em;
       font-size: 5rem;
       font-weight: 600;
-      // padding: 0.5em 0;
       color: #fff;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -113,6 +112,8 @@
             }
             .warning {
               font-size: 0.7rem;
+              width: 10em;
+              height: 2em;
               background: rgb(128, 9, 34);
               background: linear-gradient(
                 140deg,
@@ -130,9 +131,14 @@
               top: 4.5em;
               text-transform: uppercase;
               letter-spacing: 0.5px;
-              i {
-                padding-left: 0.3em;
-                font-size: 0.8rem;
+              transition: all .3s ease-in-out;
+              overflow: hidden;
+              span {
+                position: absolute;
+                i {
+                  padding-left: 0.3em;
+                  font-size: 0.8rem;
+                }
               }
             }
             .card__info {
@@ -171,6 +177,22 @@
               }
               .warning {
                 background: red;
+                width: 100%;
+                right: 0em;
+                // transform: translateX(100%);
+                // display: flex;
+                justify-content: space-evenly;
+                border-radius: 0px;
+                right: 2em;
+                top: 4.5em;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                transition: all 0.3s ease-in-out;
+
+
+                span {
+                  margin: 0 .2em;
+                }
               }
               .card__info {
                 span {
