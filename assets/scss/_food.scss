@@ -1,3 +1,28 @@
+
+// @keyframes warningSlide {
+// 	0% {
+// 		transform: translateX(25em);
+// 	}
+// 	100% {
+// 		transform: translateX(-25em);
+// 	}
+// }
+
+@keyframes warningSlide {
+	0% {
+	transform: translate3d(0, 0, 0);
+}
+
+100% {
+	transform: translate3d(calc(1.5em * 6), 0, 0);
+}
+
+}
+
+
+
+
+
 #food-preview {
   padding: 3em 0;
   border-top: 2px solid black;
@@ -72,7 +97,7 @@
           color: #000;
           font-size: 2rem;
           border-radius: 5px;
-          overflow: hidden;
+          // overflow: hidden;
           // transition: background 0.3s ease-in-out;
           &:hover, &:focus {
             .background {
@@ -99,7 +124,7 @@
             color: #000;
             font-size: 2rem;
             border-radius: 5px;
-            overflow: hidden;
+            // overflow: hidden; 
             // transition: background .3s ease-in-out;
             z-index: 2;
             .card__title {
@@ -112,7 +137,7 @@
             }
             .warning {
               font-size: 0.7rem;
-              width: 10em;
+              width: 8em;
               height: 2em;
               background: rgb(128, 9, 34);
               background: linear-gradient(
@@ -131,8 +156,8 @@
               top: 4.5em;
               text-transform: uppercase;
               letter-spacing: 0.5px;
-              transition: all .3s ease-in-out;
-              overflow: hidden;
+              // transition: all .3s ease-in-out;
+              // overflow: hidden;
               span {
                 position: absolute;
                 i {
@@ -177,21 +202,25 @@
               }
               .warning {
                 background: red;
-                width: 100%;
-                right: 0em;
-                // transform: translateX(100%);
-                // display: flex;
+                width: calc((8em) * 6);
+                right: 2em;
+                // left: 0em;
+                display: flex;
                 justify-content: space-evenly;
                 border-radius: 0px;
-                right: 2em;
-                top: 4.5em;
-                text-transform: uppercase;
-                letter-spacing: 0.5px;
+                letter-spacing: 2px;
                 transition: all 0.3s ease-in-out;
-
-
                 span {
-                  margin: 0 .2em;
+                  width: 6.5em;
+                  border: 2px solid blue;
+                  // display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin: 0 2em;
+                  position: relative;
+                  animation: warningSlide 12s linear infinite;
+                  // transform: translateX(200em);
+                  transform: translateX(0em);
                 }
               }
               .card__info {
