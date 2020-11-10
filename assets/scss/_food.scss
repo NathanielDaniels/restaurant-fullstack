@@ -1,13 +1,11 @@
-
 @keyframes warningSlide {
 	0% {
 	transform: translate3d(0, 0, 0);
-}
+  }
 
-100% {
-	transform: translate3d(calc(1.69em * 4), 0, 0);
-}
-
+  100% {
+    transform: translate3d(calc(1.69em * 4), 0, 0);
+  }
 }
 
 
@@ -71,9 +69,9 @@
     justify-content: center;
     flex-wrap: wrap;
       div {
-        transform-style: preserve-3d;
-        transform: perspective(1000px);
-        transform: translateZ(20px);
+        // transform-style: preserve-3d;
+        // transform: perspective(1000px);
+        // transform: translateZ(20px);
       
       a {
         text-decoration: none;
@@ -89,7 +87,6 @@
           font-size: 2rem;
           border-radius: 5px;
           overflow: hidden;
-          // transition: background 0.3s ease-in-out;
           &:hover, &:focus {
             .background {
               color: #fff;
@@ -116,8 +113,6 @@
             color: #000;
             font-size: 2rem;
             border-radius: 5px;
-            // overflow: hidden; 
-            // transition: background .3s ease-in-out;
             z-index: 2;
             .card__title {
               text-align: center;
@@ -148,8 +143,6 @@
               top: 4.5em;
               text-transform: uppercase;
               letter-spacing: 0.6px;
-              // transition: all .3s ease-in-out;
-              // overflow: hidden;
               span {
                 position: absolute;
                 i {
@@ -197,7 +190,6 @@
                 width: calc((6em) * 4);
                 right: 0em;
                 top: 5em;
-                // left: 0em;
                 display: flex;
                 justify-content: space-evenly;
                 border-radius: 0px;
@@ -205,15 +197,12 @@
                 transition: all 0.3s ease-in-out;
                 span {
                   width: 6.5em;
-                  // border: 2px solid blue;
                   // display: flex;
                   justify-content: center;
                   align-items: center;
                   margin: 0 2em;
                   position: relative;
                   animation: warningSlide 6s linear infinite;
-                  // transform: translateX(200em);
-                  // transform: translateX(0em);
                 }
               }
               .card__info {
