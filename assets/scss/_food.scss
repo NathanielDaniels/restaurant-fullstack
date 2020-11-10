@@ -1,20 +1,11 @@
 
-// @keyframes warningSlide {
-// 	0% {
-// 		transform: translateX(25em);
-// 	}
-// 	100% {
-// 		transform: translateX(-25em);
-// 	}
-// }
-
 @keyframes warningSlide {
 	0% {
 	transform: translate3d(0, 0, 0);
 }
 
 100% {
-	transform: translate3d(calc(1.5em * 6), 0, 0);
+	transform: translate3d(calc(1.69em * 4), 0, 0);
 }
 
 }
@@ -97,7 +88,7 @@
           color: #000;
           font-size: 2rem;
           border-radius: 5px;
-          // overflow: hidden;
+          overflow: hidden;
           // transition: background 0.3s ease-in-out;
           &:hover, &:focus {
             .background {
@@ -107,6 +98,7 @@
             }
           }
           .background {
+            // display: none;
             background: #fff;
             position: absolute;
             top: 0;
@@ -155,7 +147,7 @@
               right: 2em;
               top: 4.5em;
               text-transform: uppercase;
-              letter-spacing: 0.5px;
+              letter-spacing: 0.6px;
               // transition: all .3s ease-in-out;
               // overflow: hidden;
               span {
@@ -183,7 +175,7 @@
             .img-container {
               height: 10rem;
               .card__img {
-                transform: translateZ(20px);
+                // transform: translateZ(20px);
                 position: relative;
                 width: 8em;
                 top: 0em;
@@ -202,8 +194,9 @@
               }
               .warning {
                 background: red;
-                width: calc((8em) * 6);
-                right: 2em;
+                width: calc((6em) * 4);
+                right: 0em;
+                top: 5em;
                 // left: 0em;
                 display: flex;
                 justify-content: space-evenly;
@@ -212,15 +205,15 @@
                 transition: all 0.3s ease-in-out;
                 span {
                   width: 6.5em;
-                  border: 2px solid blue;
+                  // border: 2px solid blue;
                   // display: flex;
                   justify-content: center;
                   align-items: center;
                   margin: 0 2em;
                   position: relative;
-                  animation: warningSlide 12s linear infinite;
+                  animation: warningSlide 6s linear infinite;
                   // transform: translateX(200em);
-                  transform: translateX(0em);
+                  // transform: translateX(0em);
                 }
               }
               .card__info {
