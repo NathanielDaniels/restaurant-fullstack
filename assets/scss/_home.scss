@@ -188,9 +188,9 @@ section#welcome {
 }
 
 @media screen and (max-width: 1200px) {
-  * {
-    animation: none !important;
-  }
+  // * {
+  //   animation: none !important;
+  // }
 
   section#welcome {
     div.welcome-menu {
