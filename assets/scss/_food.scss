@@ -9,7 +9,7 @@
 }
 
 #food-preview {
-  padding: 3em 0;
+  padding: 3.5em 0;
   border-top: 2px solid black;
   position: relative;
   width: 100%;
@@ -31,21 +31,39 @@
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b90027",endColorstr="#540012",GradientType=1);
   .title {
-    width: 100%;
+    display: flex;
+    align-items: center; 
+    width: 80%;
+    justify-content: space-evenly;
     text-align: center;
-    margin-bottom: 4em; ;
+    margin-bottom: 4em;
+    position: relative;
     h1 {
-      margin-bottom: .6em;
+      margin: 0 1em;
       font-size: 5rem;
       font-weight: 600;
       color: #fff;
       text-transform: uppercase;
       letter-spacing: 2px;
+      z-index: 100;
+      // &::after {
+      //   content: '';
+      //   position: absolute;
+      //   background:  hsla(38, 93%, 48%,.6);
+      //   width: 50%;
+      //   height: .3em;
+      //   bottom: 0em;
+      //   left: 16%;
+      //   z-index: -1;
+      // }
     }
     .CTA-menu {
       color: #fff;
+      display: flex;
+      align-items: center;
       background: #ee9b08;
       padding: .5em 3em;
+      height: 3em;
       border-radius: 10px;
       font-size: 1.5rem;
       text-decoration: none;
@@ -120,14 +138,15 @@
             }
             .warning {
               font-size: 0.7rem;
-              width: 8em;
+              font-weight: 300;
+              width: 7em;
               height: 2em;
               background: rgb(128, 9, 34);
-              background: linear-gradient(
-                140deg,
-                rgba(95, 4, 23, 1) 50%,
-                rgba(128, 9, 34, 1) 0%
-              );
+              // background: linear-gradient(
+              //   140deg,
+              //   rgba(95, 4, 23, 1) 50%,
+              //   rgba(128, 9, 34, 1) 0%
+              // );
               color: white;
               position: absolute;
               padding: 0.2em 1em;
@@ -138,7 +157,7 @@
               right: 2em;
               top: 4.5em;
               text-transform: uppercase;
-              letter-spacing: 0.6px;
+              letter-spacing: 1px;
               span {
                 position: absolute;
                 i {
@@ -186,6 +205,7 @@
                 width: calc((6em) * 4);
                 right: 0em;
                 top: 5em;
+                font-weight: 500;
                 display: flex;
                 justify-content: space-evenly;
                 border-radius: 0px;
