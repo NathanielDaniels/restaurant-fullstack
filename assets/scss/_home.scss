@@ -199,6 +199,7 @@ section#welcome {
       z-index: 100;
       box-shadow: 2px 0px 5px hsl(347, 92%, 9%);
       transition: all 0.3s ease-in-out;
+      animation: none !important;
       div.close {
         display: flex;
         justify-content: flex-end;

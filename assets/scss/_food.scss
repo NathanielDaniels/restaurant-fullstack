@@ -242,3 +242,24 @@
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  #food-preview {
+    padding: 4em 0;
+ 
+    .title {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 2em;
+      left: 0em;
+      h1 {
+        font-size: 3rem;
+        margin-bottom: .5em;
+      }
+      .CTA-menu {
+      }
+    }
+  }
+}
