@@ -41,7 +41,7 @@ section#welcome {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100%;
   overflow: hidden;
   background: rgb(128, 9, 34);
@@ -187,13 +187,16 @@ section#welcome {
 	}
 }
 
+//!================================   
+//? Media
+
 @media screen and (max-width: 1200px) {
   // * {
   //   animation: none !important;
   // }
 
   section#welcome {
-    div.welcome-menu {
+    .welcome-menu {
       transform: translateX(-15em);
       position: absolute;
       z-index: 100;
@@ -201,16 +204,17 @@ section#welcome {
       transition: all 0.3s ease-in-out;
       animation: none !important;
       div.close {
-        display: flex;
-        justify-content: flex-end;
+        // display: flex;
+        // justify-content: flex-end;
         top: 0;
-        left: 0;
+        right: 0;
         z-index: 1000;
         margin: .2em;
-        font-size: 2em;
+        font-size: 1.5em;
         cursor: pointer;
+        position: absolute;
       }
-      div.logo {
+      .logo {
         margin-top: -5em;
         font-size: 1.5rem !important;
         img {
@@ -220,7 +224,7 @@ section#welcome {
         }
       }
     }
-    div.welcome-jumbo {
+  .welcome-jumbo {
       width: 100%;
       .mobile-burger-menu__button {
         display: block;
@@ -276,7 +280,7 @@ section#welcome {
         }
       }
 
-      div.title {
+      .title {
         left: 50%;
         top: 40%;
         transform: translate(-50%, -50%);
@@ -284,11 +288,7 @@ section#welcome {
         max-width: 100%;
         h1 {
           font-size: 5rem;
-          // 	span {
-          // 	}
         }
-        // p {
-        // }
       }
       img {
         top: 10em;
@@ -301,4 +301,20 @@ section#welcome {
 }
 
 
-
+@media screen and (max-width: 800px) {
+  section#welcome {
+    div.welcome-jumbo {
+      div.title {
+        h1 {
+          font-size: 4rem;
+          span {
+            font-size: 8.4rem;
+          }
+        }
+        p {
+          font-size: 2.2rem;
+        }
+      }
+    }
+  }
+}
