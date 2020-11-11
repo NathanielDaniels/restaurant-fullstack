@@ -35,7 +35,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-bottom: 2px solid blue;
+      // border-bottom: 2px solid blue;
 
     }
   }
@@ -145,19 +145,51 @@
     //   }
     // }
     div.restaurant-info {
-      width: 60%;
+      // width: 60%;
+      width: 100%;
       right: 0;
       top: 0;
-      // margin: 0em auto 0;
+      z-index: 0;
       position: relative;
-      padding: 1em 0;
+      animation: none;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 100%;
+      // background: #fff;
+      background: transparent;
+      padding: 0;
+      border-radius: 0px;
+      box-shadow: none;
       h1.info-title {
-        font-size: 2.2rem;
+        text-align: right;
+        // font-size: 5rem;
+        font-size: clamp(5rem, 2.5vw, 4rem);
+        width: 40%;
+        color: #ee9b08;
+        padding: 0 .5em;
+
       }
       div.info-content {
+        background: rgb(179, 179, 179);
         flex-direction: column;
-        p {
-          margin-top: .5em;
+        // width: 50%;
+        width: 36em;
+        height: 100%;
+        justify-content: center;
+        p:nth-child(1) {
+          margin-bottom: 2em;
+        }
+      }
+      a {
+        text-align: left;
+        width: 30%;
+        font-size: 3rem;
+        color: #fff;
+        &:hover {
+          background: transparent;
+        }
+        i {
+          font-size: 2.5rem;
         }
       }
     }
@@ -168,10 +200,26 @@
 @media screen and (max-width: 800px) {
   section#information {
     div.restaurant-info {
-      width: 90%;
-      h1.info-title {
-        font-size: 2.2rem;
-      }
+      background: #fff;
+      width: 100%;
+      right: 0;
+      top: 0;
+      z-index: 0;
+      position: relative;
+      animation: none;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: auto;
+      // background: #fff;
+      background: transparent;
+      padding: 0;
+      border-radius: 0px;
+      box-shadow: none;
+
+      // width: 90%;
+      // h1.info-title {
+      //   // font-size: 2.2rem;
+      // }
       div.info-content {
         flex-direction: column;
         p {

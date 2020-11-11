@@ -55,7 +55,7 @@ section#welcome {
 		border-right: 2px solid black;
 		width: 12em;
 		background: #eee;
-		height: 100vh;
+		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -63,6 +63,14 @@ section#welcome {
     animation: menuSlide 1s 1 ease-in-out;
     .close {
       display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: rgba(95, 4, 23, 1);
+      margin: 0.2em;
+      font-size: 1.5em;
+      z-index: 1000;
+      cursor: pointer;
     }
 		.logo {
       margin: .5em 0;
@@ -71,7 +79,6 @@ section#welcome {
 			img {
         position: relative;
         width: 6em;
-        
 			}
 		}
 		.menu {
@@ -147,7 +154,7 @@ section#welcome {
     .mobile-burger-menu__button {
       display: none;
     }
-		.title {
+		.title-container {
       animation: titleFade 2.5s 1 ease-in-out;
 			text-align: center;
       max-width: 80%;
@@ -204,22 +211,14 @@ section#welcome {
       transition: all 0.3s ease-in-out;
       animation: none !important;
       div.close {
-        // display: flex;
-        // justify-content: flex-end;
-        top: 0;
-        right: 0;
-        z-index: 1000;
-        margin: .2em;
-        font-size: 1.5em;
-        cursor: pointer;
-        position: absolute;
+        display: block;
       }
       .logo {
-        margin-top: -5em;
+        // margin-top: -5em;
         font-size: 1.5rem !important;
         img {
-          width: 5em;
-          top: 2em;
+          // width: 5em;
+          // top: 1em;
 
         }
       }
@@ -280,7 +279,7 @@ section#welcome {
         }
       }
 
-      .title {
+      .title-container {
         left: 50%;
         top: 40%;
         transform: translate(-50%, -50%);
@@ -304,7 +303,7 @@ section#welcome {
 @media screen and (max-width: 800px) {
   section#welcome {
     div.welcome-jumbo {
-      div.title {
+      div.title-container {
         h1 {
           font-size: 4rem;
           span {
