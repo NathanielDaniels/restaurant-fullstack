@@ -199,7 +199,7 @@ section#welcome {
 //? Media
 
 @media screen and (max-width: 1200px) {
-  // * {
+  // {
   //   animation: none !important;
   // }
 
@@ -217,11 +217,10 @@ section#welcome {
       .logo {
         // margin-top: -5em;
         font-size: 1.5rem !important;
-        img {
-          // width: 5em;
-          // top: 1em;
-
-        }
+        // img {
+        //   // width: 5em;
+        //   // top: 1em;
+        // }
       }
     }
   .welcome-jumbo {
