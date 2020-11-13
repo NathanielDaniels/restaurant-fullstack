@@ -291,11 +291,15 @@
             console.log(counter);
             for (let i = 0; i < cards.length; i++) {
               let moveRight = (parseInt(cards[i].style.left, 10) || 0) + 160;
-              if (screenWidth <= "900") {
+              if (screenWidth <= "600") {
+                console.log("left arrow under 600");
+                mmoveRight = (parseInt(cards[i].style.left, 10) || 0) + 180;
+              }
+              if (screenWidth <= "900" && screenWidth > "600") {
                 console.log("left arrow under 900");
                 moveRight = (parseInt(cards[i].style.left, 10) || 0) + 160;
               }
-              if (screenWidth < "1000") {
+              if (screenWidth < "1000" && screenWidth > "900") {
                 console.log("left arrow under 1200");
                 // moveRight = (parseInt(cards[i].style.left, 10) || 0) + 260;
               }
@@ -318,11 +322,15 @@
             console.log(counter);
             for (let i = 0; i < cards.length; i++) {
               let moveLeft = (parseInt(cards[i].style.left, 10) || 0) - 180;
-              if (screenWidth <= "900") {
+              if (screenWidth <= "600") {
+                console.log("left arrow under 600");
+                mmoveRight = (parseInt(cards[i].style.left, 10) || 0) - 300;
+              }
+              if (screenWidth <= "900" && screenWidth > "600") {
                 console.log('right arrow click under 900px')
                 moveLeft = (parseInt(cards[i].style.left, 10) || 0) - 160;
               }
-              if (screenWidth < "1000") {
+              if (screenWidth <= "1000" && screenWidth > "900") {
                 console.log('right arrow click under 1000px')
                 // moveLeft = (parseInt(cards[i].style.left, 10) || 0) - 260;
               }
