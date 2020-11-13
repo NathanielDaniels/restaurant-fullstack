@@ -144,6 +144,10 @@
         padding: 0;
         padding-right: 0.4em;
         line-height: 70px;
+        span {
+          position: relative;
+          top: 10px;
+        }
       }
 
       .info-content {
@@ -220,7 +224,9 @@
         font-size: 3.5rem;
         color: #ee9b08;
         padding-right: 0;
-
+        span {
+          top: 0px;
+        }
       }
       div.info-content {
         width: 100%;
@@ -235,8 +241,6 @@
         p {
           width: 95%;
           margin: 0 auto;
-         
-
            &:nth-child(1) {
             margin-bottom: 1.5em;
           }
