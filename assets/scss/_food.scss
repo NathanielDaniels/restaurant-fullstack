@@ -9,6 +9,7 @@
 }
 
 #food-preview {
+  overflow: hidden;
   padding: 6em 0;
   border-top: 2px solid black;
   position: relative;
@@ -49,9 +50,9 @@
     position: relative;
     h1 {
       font-size: 5rem;
-      font-weight: 400;
+      font-weight: 500;
       color: #fff;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       z-index: 100;
       // &::after {
       //   content: '';
@@ -391,7 +392,7 @@
 
 @media screen and (max-width: 1200px) {
   #food-preview {
-    padding: 4em 0;
+    padding: 4em 0 6em;
     .title {
       width: 100%;
       flex-direction: column;
@@ -400,7 +401,7 @@
       margin: 0 0 2em 2em;
       left: 0em;
       h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
         margin-bottom: .5em;
       }
       .CTA-menu {

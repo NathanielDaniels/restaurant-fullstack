@@ -15,7 +15,8 @@
 #information {
   overflow: hidden;
 	display: flex;
-  background: rgb(228, 228, 228);
+  // background: rgb(228, 228, 228);
+  background: rgb(179, 181, 184);
   // background: #21262b;
 	position: relative;
 	.restaurant-img {
@@ -37,7 +38,7 @@
 	.restaurant-info {
     animation: infoSlide 1s 1 ease-in-out;
     z-index: 100;
-    width: 50%; min-width: 45em;
+    width: 50%; min-width: 50em;
 		padding: 0em 2em;
 		// position: absolute;
     right: 5%; 
@@ -187,8 +188,8 @@
     div.restaurant-info {
       background: transparent;
       width: 100%;
-      right: 0; top: 0;
       min-width: 100%;
+      right: 0; top: 0;
       z-index: 0;
       position: relative;
       animation: none;
@@ -211,16 +212,17 @@
         
       }
       div.info-content {
-        width: 100%; 
+        width: 100%;
+        min-width: 100%;
         // height: auto;
         // background: rgb(179, 179, 179);
         background: transparent;
         color: rgba(255, 255, 255,.6);
         flex-direction: column;
         justify-content: center;
-       
+        padding: 2em 0;
         p {
-          width: 80%;
+          width: 95%;
           margin: 0 auto;
            &:nth-child(1) {
             margin-bottom: 1.5em;

@@ -280,60 +280,64 @@
         const arrows = document.querySelector('.arrows')
         const leftArrow = document.querySelector('.left-arrow')
         const rightArrow = document.querySelector('.right-arrow')
+        const cards = document.querySelectorAll('.card')
+        // console.log(cards.length) //5
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
 
         let counter = 0;
-
         leftArrow.addEventListener('click', () => {
-          console.log('left arrow click')
-
-          counter++;
-          // console.log(counter);
-          if (counter <= 5 && counter >= -5) {
-            counter++;
-            for (let i = 0; i < scrollRecipes.length; i++) {
-              let moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 320;
-              if (screenWidth < "1200") {
-                console.log("working under 1200");
-                moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 250;
+          // console.log('left arrow click')
+          if (counter > 0 && counter < 4) {
+            counter--;
+            console.log(counter);
+            for (let i = 0; i < cards.length; i++) {
+              let moveRight = (parseInt(cards[i].style.left, 10) || 0) + 160;
+              if (screenWidth <= "900") {
+                console.log("left arrow under 900");
+                moveRight = (parseInt(cards[i].style.left, 10) || 0) + 160;
               }
-              if (screenWidth < "900") {
-                console.log("working under 900");
-                moveRight = (parseInt(scrollRecipes[i].style.left, 10) || 0) + 220;
+              if (screenWidth < "1000") {
+                console.log("left arrow under 1200");
+                // moveRight = (parseInt(cards[i].style.left, 10) || 0) + 260;
               }
-              scrollRecipes[i].style.position = "relative";
-              scrollRecipes[i].style.left = moveRight + "px";
+              cards[i].style.position = "relative";
+              cards[i].style.left = moveRight + "px";
             }
-            } else if (counter > 3) {
-              counter--;
-            } else {
-              nextArrow.disabled = true;
-            }
+            } 
+            else if (counter <= 0) {
+              counter = 0;
+              leftArrow.disabled = true;
+            } 
+            // else {
+            // }
           })
 
         rightArrow.addEventListener('click', () => {
-          console.log('right arrow click')
-
-          counter--;
-          // console.log(counter);
-          if (counter >= -3 && counter <= 3) {
-            counter--;
-            for (let i = 0; i < scrollRecipes.length; i++) {
-              let moveLeft = (parseInt(scrollRecipes[i].style.left, 10) || 0) - 320;
-              if (screenWidth < "1200") {
-                moveLeft = (parseInt(scrollRecipes[i].style.left, 10) || 0) - 250;
+          
+          if (counter >= 0 && counter < 3) {
+            counter++;
+            console.log(counter);
+            for (let i = 0; i < cards.length; i++) {
+              let moveLeft = (parseInt(cards[i].style.left, 10) || 0) - 180;
+              if (screenWidth <= "900") {
+                console.log('right arrow click under 900px')
+                moveLeft = (parseInt(cards[i].style.left, 10) || 0) - 160;
               }
-              if (screenWidth < "900") {
-                moveLeft = (parseInt(scrollRecipes[i].style.left, 10) || 0) - 220;
+              if (screenWidth < "1000") {
+                console.log('right arrow click under 1000px')
+                // moveLeft = (parseInt(cards[i].style.left, 10) || 0) - 260;
               }
-              scrollRecipes[i].style.position = "relative";
-              scrollRecipes[i].style.left = moveLeft + "px";
+              cards[i].style.position = "relative";
+              cards[i].style.left = moveLeft + "px";
              
             }
-          } else if (counter < -3) {
-            counter++;
-          } else {
-            prevArrow.disabled = true;
-          }
+          } else if (counter === 4) {
+            // counter = 4;
+            rightArrow.disabled = true;
+          } 
+          // else {
+          // }
         })
       }
       arrowClick()
