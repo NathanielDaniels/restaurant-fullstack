@@ -55,7 +55,7 @@ section#welcome {
   //! Left-side
 	.welcome-menu {
 		border-right: 2px solid black;
-		width: 12em;
+		width: 14em;
 		background: #eee;
 		min-height: 100vh;
 		display: flex;
@@ -152,7 +152,7 @@ section#welcome {
 		cursor: default;
 		position: relative;
 		height: 100vh;
-    width: calc(100% - 15em);
+    width: calc(100% - 14em);
     .mobile-burger-menu__button {
       display: none;
     }
@@ -162,14 +162,13 @@ section#welcome {
       max-width: 80%;
       width: 40em;
 			position: relative;
-			top: 50%;
-			left: 5%;
-			transform: translate(-10%, -50%);
+      top: 50%;
+      left: 50%;
+      transform: translateX(calc(-50% - 11em)) translateY(-50%);
 			color: #fff;
-      // filter: drop-shadow(0px 10px 40px #5f0417);
       text-shadow: 0px 1px 4px #5f0417, 0px -1px 4px #5f0417, -1px 0px 4px #5f0417, 1px 0px 4px #5f0417;
 			h1 {
-        font-size: clamp(5.4rem, 1vw, 1rem);
+        font-size: clamp(5.3rem, 1vw, 1rem);
         line-height: 0.8;
 				span {
 					position: relative;
@@ -180,8 +179,8 @@ section#welcome {
 				}
 			}
 			p {
-				font-size: 3rem;
-				margin-top: -5px;
+				font-size: 2.8rem;
+				margin-top: -3px;
         color: rgb(204, 204, 204);
         // text-shadow: 0px 1px 10px #5f0417, 0px -1px 10px #5f0417, -1px 0px 10px #5f0417, 1px 0px 10px #5f0417;
 			}
@@ -290,7 +289,7 @@ section#welcome {
         z-index: 5;
         max-width: 100%;
         h1 {
-          font-size: 5rem;
+          font-size: 5.3rem;
         }
       }
       img {
@@ -310,7 +309,7 @@ section#welcome {
       div.title-container {
         top: 30%;
         h1 {
-          font-size: 4rem;
+          font-size: 4.1rem;
           span {
             font-size: 8.4rem;
           }
