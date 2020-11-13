@@ -52,6 +52,7 @@ section#welcome {
 	rgba(95, 4, 23, 1) 50%
 );
   border-bottom: 2px solid black;
+  //! Left-side
 	.welcome-menu {
 		border-right: 2px solid black;
 		width: 12em;
@@ -165,9 +166,11 @@ section#welcome {
 			left: 5%;
 			transform: translate(-10%, -50%);
 			color: #fff;
+      // filter: drop-shadow(0px 10px 40px #5f0417);
+      text-shadow: 0px 1px 4px #5f0417, 0px -1px 4px #5f0417, -1px 0px 4px #5f0417, 1px 0px 4px #5f0417;
 			h1 {
         font-size: clamp(5.4rem, 1vw, 1rem);
-				line-height: 0.8;
+        line-height: 0.8;
 				span {
 					position: relative;
 					text-transform: uppercase;
@@ -179,7 +182,8 @@ section#welcome {
 			p {
 				font-size: 3rem;
 				margin-top: -5px;
-				color: rgb(204, 204, 204);
+        color: rgb(204, 204, 204);
+        // text-shadow: 0px 1px 10px #5f0417, 0px -1px 10px #5f0417, -1px 0px 10px #5f0417, 1px 0px 10px #5f0417;
 			}
 		}
 		img {
@@ -290,9 +294,9 @@ section#welcome {
         }
       }
       img {
-        top: 10em;
+        top: 4em;
         position: absolute;
-        transform: rotate(45deg);
+        transform: rotate(90deg);
         max-width: 100%;
       }
     }
@@ -304,6 +308,7 @@ section#welcome {
   section#welcome {
     div.welcome-jumbo {
       div.title-container {
+        top: 30%;
         h1 {
           font-size: 4rem;
           span {
