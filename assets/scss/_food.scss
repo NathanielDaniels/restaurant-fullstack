@@ -396,15 +396,15 @@
       width: 100%;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      margin: 0 auto 2em;
+      align-items: flex-start;
+      margin: 0 0 2em 2em;
       left: 0em;
       h1 {
         font-size: 3rem;
         margin-bottom: .5em;
       }
       .CTA-menu {
-        padding: 1em 5em;
+        padding: .75em 5.5em;
       }
     }
     .cards {
