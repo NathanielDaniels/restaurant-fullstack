@@ -290,21 +290,23 @@
             counter--;
             console.log(counter);
             for (let i = 0; i < cards.length; i++) {
-              // let moveRight = (parseInt(cards[i].style.left, 10) || 0) + 250;
-              if (screenWidth <= "600") {
-                console.log("left arrow under 600");
-                moveRight = (parseInt(cards[i].style.left, 10) || 0) + 250;
-              }
-              if (screenWidth <= "900" && screenWidth > "600") {
-                console.log("left arrow under 900");
-                moveRight = (parseInt(cards[i].style.left, 10) || 0) + 190;
-              }
-              if (screenWidth < "1000" && screenWidth > "900") {
-                console.log("left arrow under 1200");
-                moveRight = (parseInt(cards[i].style.left, 10) || 0) + 110;
-              }
+              // let moveRight = '';
+              let moveRight = (parseInt(cards[i].style.left, 10) || 0) + 8;
+              // if (screenWidth <= "600") {
+              //   console.log("left arrow under 600");
+              //   moveRight = (parseInt(cards[i].style.left, 10) || 0) + 250;
+              // }
+              // if (screenWidth <= "900" && screenWidth > "600") {
+              //   console.log("left arrow under 900");
+              //   moveRight = (parseInt(cards[i].style.left, 10) || 0) + 190;
+              // }
+              // if (screenWidth < "1000" && screenWidth > "900") {
+              //   console.log("left arrow under 1200");
+              //   moveRight = (parseInt(cards[i].style.left, 10) || 0) + 110;
+              // }
               cards[i].style.position = "relative";
-              cards[i].style.left = moveRight + "px";
+              // cards[i].style.left = moveRight + "px";
+              cards[i].style.left = moveRight + "em";
             }
             } 
             else if (counter <= 0) {
@@ -319,21 +321,23 @@
             counter++;
             console.log(counter);
             for (let i = 0; i < cards.length; i++) {
-              // let moveLeft = (parseInt(cards[i].style.left, 10) || 0) - 250;
-              if (screenWidth <= "600") {
-                console.log("left arrow under 600");
-                moveLeft = (parseInt(cards[i].style.left, 10) || 0) - 250;
-              }
-              if (screenWidth <= "900" && screenWidth > "600") {
-                console.log('right arrow click under 900px')
-                moveLeft = (parseInt(cards[i].style.left, 10) || 0) - 190;
-              }
-              if (screenWidth <= "1000" && screenWidth > "900") {
-                console.log('right arrow click under 1000px')
-                moveLeft = (parseInt(cards[i].style.left, 10) || 0) - 110;
-              }
+              // let moveLeft = '';
+              let moveLeft= (parseInt(cards[i].style.left, 10) || 0) - 8;
+              // if (screenWidth <= "600") {
+              //   console.log("left arrow under 600");
+              //   moveLeft = (parseInt(cards[i].style.left, 10) || 0) - 250;
+              // }
+              // if (screenWidth <= "900" && screenWidth > "600") {
+              //   console.log('right arrow click under 900px')
+              //   moveLeft = (parseInt(cards[i].style.left, 10) || 0) - 190;
+              // }
+              // if (screenWidth <= "1000" && screenWidth > "900") {
+              //   console.log('right arrow click under 1000px')
+              //   moveLeft = (parseInt(cards[i].style.left, 10) || 0) - 110;
+              // }
               cards[i].style.position = "relative";
-              cards[i].style.left = moveLeft + "px";
+              // cards[i].style.left = moveLeft + "px";
+              cards[i].style.left = moveLeft + "em";
              
             }
           } else if (counter === 4) {
