@@ -138,7 +138,6 @@
         </a>
       </div>
       <ul class="cards">
-        <div class="tilt-container">
             <a href="#HotFireChicken" >
               <li class="card" >
                 <div class="background"></div>
@@ -161,8 +160,6 @@
                 </div>
               </li>
             </a>
-        </div>
-        <div class="tilt-container">
           <a href="#Tacos">
             <li class="card">
               <div class="background"></div>
@@ -177,8 +174,6 @@
               </div>
             </li>
           </a>
-        </div>
-        <div class="tilt-container">
           <a href="#Burgers">
             <li class="card">
               <div class="background"></div>
@@ -195,8 +190,6 @@
               </div>
             </li>
           </a>
-        </div>
-        <div class="tilt-container" >
           <a href="#Burritos">
             <li class="card">
               <div class="background"></div>
@@ -213,8 +206,6 @@
               </div>
             </li>
           </a>
-        </div>
-        <div class="tilt-container">
           <a href="#fish-n-chips">
             <li class="card">
               <div class="background"></div>
@@ -231,7 +222,6 @@
               </div>
             </li>
           </a>
-        </div>
       </ul>
       <div class="arrows">
         <div class="left-arrow">
@@ -245,7 +235,6 @@
     
 		<!--! Javascript -->
     <script type="text/javascript" src="vanilla-tilt.js"></script>
-    <!-- <script type="text/javascript" src="vanilla-tilt.js"></script> -->
     <script type="text/javascript">
 			function mobileMenu () {
         const menu = document.querySelector('.welcome-menu')
@@ -279,9 +268,9 @@
         const leftArrow = document.querySelector('.left-arrow')
         const rightArrow = document.querySelector('.right-arrow')
         const cards = document.querySelectorAll('.card')
-        // console.log(cards.length) //5
-        const screenWidth = window.innerWidth;
-        const screenHeight = window.innerHeight;
+
+        // const screenWidth = window.innerWidth;
+        // const screenHeight = window.innerHeight;
 
         let counter = 0;
         leftArrow.addEventListener('click', () => {
@@ -348,6 +337,24 @@
       }
       arrowClick()
 
+      // arrowAction = () => {
+      //   const arrows = document.querySelector('.arrows')
+      //   const leftArrow = document.querySelector('.left-arrow')
+      //   const rightArrow = document.querySelector('.right-arrow')
+      //   const cards = document.querySelectorAll('.card')
+      //   const screenWidth = window.innerWidth;
+      //   const screenHeight = window.innerHeight;
+
+      //   let counter = 0;
+      //   leftArrow.addEventListener('click', () => {
+      //       counter += -18
+      //     for (let i = 0; i < cards.length; i++) {
+      //       counter += 1
+      //       cards[i].style.transform = `translateX(${counter}em)`
+      //     }
+      //   })
+      // }
+      // arrowAction()
       
 
     </script>
