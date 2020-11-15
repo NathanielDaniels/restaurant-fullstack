@@ -137,7 +137,6 @@
     }
   }
   .cards {
-    // border: 2px solid blue;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -149,7 +148,6 @@
       text-decoration: none;
       cursor: pointer;
       .card {
-        transform: translateX(-em);
         background: #fff;
         position: relative;
         margin: 0.2em;
